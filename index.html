@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Stage Auto Garage</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/dc8dd44a01.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Special Stage Auto Garage</a>
+        <div class="nav">
+        <ul class="navlist">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Hours</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="fa-solid fa-bars" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <section class="home">
+        <div class="home-text">
+            <h5>Welcome to</h5>
+            <h1>Special Stage Auto Garage</h1>
+            <p>Your engine knows best!</p>
+            <button class="home-btn" id="scroll-button">Learn More</button>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="services-text" id="text-1">
+            <h2>Services</h2>
+            <h5>Vehicle Mechanics Repair</h5>
+            <p>You're a busy person — don't let vehicle problems get in your way.
+            <br>Special Stage Auto Garage has the proper equipment and
+            <br>experience to locate, repair and/or replace the issue quickly and
+            <br>effectively. Call us to take care of your Roadside Assistance needs today.</p>
+        </div>
+
+        <div class="img-1">
+            <img class="images" src="assets/img2.png" alt="VMR-logo">
+            <img class="vm__img" src="assets/Vechicle Mechanics.jpeg" alt="vmr image">
+        </div>
+    </section>
+
+    <section class="services" id="section-2">
+        <div class="services-text" id="text-2">
+            <h5>Paint Job</h5>
+            <p>Our Painters are what set us apart from other . Making your vehicle
+            <br>work harder than it needs to will shorten its life. Drop it off with
+            <br>the pros at Special Stage Auto Garage today. We know what to do.</p>
+        </div>
+
+        <div class="img-2">
+            <img class="images" src="assets/img3.png" alt="PJ-logo">
+            <img class="pj__img" src="assets/Paint Job.jpg" alt="pj image">
+        </div>
+    </section>
+
+    <section class="services" id="section-3">
+        <div class="services-text" id="text-3">
+            <h5>A/C Repair</h5>
+            <p>Special Stage Auto Garage has the A/C Repair experience to help
+            <br>keep your vehicle running smoothly. We offer the highest quality
+            <br>customer service and will treat your automobile as if it were our own.
+            <br>Roll off the lot with your vehicle feeling brand new. You'll be amazed
+            <br>by the difference our A/C Repair services will make.</p>
+        </div>
+
+        <div class="img-3">
+            <img class="images" src="assets/img4.png" alt="A/C-logo">
+            <img class="ac__img" src="assets/AC Repair.jpg" alt="ac__img">
+        </div>
+    </section>
+
+    <section>
+        <div class="schedule__text">
+
+        </div>
+    </section>
+    
+</body>
+<script>
+    const menu = document.querySelector('#menu-icon');
+    const navlist = document.querySelector('.navlist');
+
+       menu.onclick = () => {
+        menu.classList.toggle('fa-xmark');
+        navlist.classList.toggle('open');
+    }
+
+    const button = document.getElementById('scroll-button');
+
+    button.addEventListener('click', () => {
+      const nextSection = document.querySelector('#services');
+      nextSection.scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
+</html>
