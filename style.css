@@ -13,8 +13,6 @@ body {
     width: 100%;
     height: 100vh;
     background-color: #252525;
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 .logo {
@@ -37,6 +35,11 @@ header {
     background-color: transparent;
 }
 
+header a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
 .nav {
     display: flex;
 }
@@ -46,6 +49,7 @@ header {
 }
 
 .navlist a {
+    text-decoration: none;
     font-size: 16px;
     color: #ffff;
     text-transform: capitalize;
@@ -75,7 +79,7 @@ header {
     cursor: pointer;
 }
 
-.home {
+#home {
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -84,9 +88,9 @@ header {
     align-items: center;
     background-image: url("assets/Civic.jpg");
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    padding: 0 10%;
+    padding: 0 15%;
 }
 
 .home-text {
@@ -139,23 +143,15 @@ header {
     color: #030303;
 }
 
-.services {
+.container-fluid {
     width: 100%;
     height: 100vh;
-    position: absolute;
+    position: relative;
     padding: 0 5%;
     top: 100%;
 }
 
-#section-2 {
-    top: 200%;
-}
-
-#section-3 {
-    top: 300%;
-}
-
-.services h2 {
+.container-fluid h2 {
     padding-top: 5%;
     color: #ffff;
     text-transform: uppercase;
@@ -193,6 +189,9 @@ header {
 }
 
 .images {
+    max-width: 100%;
+    width: auto;
+    height: auto;
     border-radius: 15px;
     box-shadow: 
     6px 6px 6px #030303,
@@ -202,7 +201,8 @@ header {
 .vm__img {
     border-radius: 15px;
     position: absolute;
-    width: 120%;
+    width: 100%;
+    height: 100%;
     top: -45%;
     left: 76%;
     z-index: -1;
@@ -212,6 +212,7 @@ header {
 }
 
 .img-1 {
+    margin: 2% 4%;
     position: absolute;
     top: 40%;
 }
@@ -219,7 +220,8 @@ header {
 .pj__img {
     border-radius: 15px;
     position: absolute;
-    width: 120%;
+    width: 100%;
+    height: 100%;
     top: -40%;
     right: 76%;
     z-index: -1;
@@ -230,15 +232,17 @@ header {
 
 .img-2 {
     position: absolute;
-    top: 30%;
-    right: 5%;
+    top: 20%;
+    margin: 2% 4%;
+    right: 6%;
     transform: translateY(0);
 }
 
 .ac__img {
     border-radius: 15px;
     position: absolute;
-    width: 120%;
+    width: 100%;
+    height: 100%;
     top: -45%;
     left: 76%;
     z-index: -1;
@@ -248,8 +252,9 @@ header {
 }
 
 .img-3 {
+    margin: 2% 4%;
     position: absolute;
-    top: 30%;  
+    top: 20%;  
 }
 
 .schedule__text {
@@ -257,7 +262,85 @@ header {
     height: 100vh;
     position: absolute;
     padding: 0 5%;
-    top: 400%;
+    top: auto;
+}
+
+i {
+    font-size: 2.4rem
+}
+
+.footer {
+    position: relative;
+    padding-block: 5rem;
+    background-color: #030303;
+    color: #666873;
+    top: auto;
+}
+
+.footer__container {
+    max-width: 116rem;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+.footer__top {
+    display: grid;
+    grid-template-columns:
+    repeat(auto-fit, minmax(20rem, 1fr));
+    row-gap: 2rem;
+}
+
+.footer__title {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer__list-link {
+    text-decoration: none;
+    color: inherit;
+    transform: color .25s;
+}
+
+.footer__list-link:hover {
+    color: #fff;
+}
+
+.company__info {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-right: 5rem;
+}
+
+.company__logo {
+    color: #fff;
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+.company__info ul {
+    flex-direction: row;
+}
+
+.socmed__name {
+    font-weight: 700;
+}
+
+.copyright {
+    margin-top: auto;
+}
+
+.copyright i {
+    font-size: 0.8rem;
 }
 
 @media (min-width: 751px) and (max-width: 2400px) {
@@ -266,7 +349,7 @@ header {
         transition: .3s;
     }
 
-    .home {
+    #home {
         height: 100vh;
         background-size: contain;
         background-position: center;
@@ -286,14 +369,13 @@ header {
         display: none;
     }
 
-    .images {
-        max-width: 100%;
-        height: auto;
+    #section-4 {
+        top: auto;
     }
 
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
 
     header {
         height: 10%;
@@ -301,7 +383,8 @@ header {
         background-color: #252525;
     }
 
-    .home {
+    #home {
+        max-width: 100%;
         height: 100vh;
         background-size: contain;
         background-position: center;
@@ -321,15 +404,21 @@ header {
         display: none;
     }
 
-    .services {
+    .container-fluid {
         display: flex;
         flex-direction: row;
         padding: 0 5%;
         justify-content: center;
     }
 
-    .images {
-        width: 650px;
+    #section-4 {
+        top: 10%;
+    }
+
+    .vm__img, .pj__img, .ac__img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
     }
 
     .img-1 {
@@ -357,7 +446,8 @@ header {
         transition: .5s;
     }
 
-    .home {
+    #home {
+        width: auto;
         height: 50%;
     }
 
@@ -401,9 +491,6 @@ header {
     top: 6%;
     }
 
-    .images {
-        width: 300px;
-    }
 
     .vm__img, .pj__img, .ac__img {
         display: none;
@@ -422,16 +509,24 @@ header {
         top: 33%;
     }
 
-    .services {
-        top: 60%;
+    .container-fluid {
+        top: 100%;
+    }
+
+    #services {
+        top: 50%;
     }
 
     #section-2 {
-        top: 125%;
+        top: 30%;
     }
 
     #section-3 {
-        top: 175%;
+        top: -10%;
+    }
+    
+    #section-4 {
+        top: -500%;
     }
 
     .services-text h5 {
@@ -439,6 +534,10 @@ header {
     }
 
     .services-text p {
-        font-size: 14px;
+        font-size: 13px;
+    }
+
+    .footer {
+        top: auto;
     }
 }
