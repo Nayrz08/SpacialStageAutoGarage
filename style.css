@@ -12,6 +12,7 @@ body {
     width: 100%;
     height: 100vh;
     background-color: #212429;
+    font-family: 'Roboto', sans-serif;
 }
 
 .logo {
