@@ -30,7 +30,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 25px 6%;
+    padding: 20px 6%;
     background-color: transparent;
 }
 
@@ -269,7 +269,7 @@ i {
 
 .footer {
     position: relative;
-    padding-block: 5rem;
+    padding: 2rem 5rem;
     background-color: #030303;
     color: #666873;
 }
@@ -282,6 +282,7 @@ i {
 
 .footer__top {
     display: grid;
+    flex-direction: row;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     row-gap: 2rem;
 }
@@ -345,7 +346,7 @@ i {
 
 form {
     width: 50%;
-    display: flex;
+    display: grid;
     flex-direction: column;
 }
 
